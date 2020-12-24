@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.gsport24.ui.screens.main.fragments.profile.fragments.passportInfo.PassportInfoViewModel" />
+    </data>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        style="@style/PageContentStyle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbarSize="0dp"
+        android:scrollbarStyle="outsideInset">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/passport_number"
+                android:textColor="@color/white_80" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPassportNumber"
+                style="@style/EditStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint="@string/passport_number"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:inputType="text" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/given_date"
+                android:textColor="@color/white_80" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etGivenDate"
+                style="@style/EditStyle"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:clickable="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint="@string/given_date"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:inputType="text" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/who_gave"
+                android:textColor="@color/white_80" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etWhoGave"
+                style="@style/EditStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint="@string/who_gave"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:inputType="text" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/passport_photo"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_m"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:scrollbarSize="@dimen/text_size_l"
+                android:text="@string/upload_photo_hint"
+                android:textColor="@android:color/white" />
+
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:id="@+id/fblPhotos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:alignContent="space_between"
+                app:alignItems="stretch"
+                app:flexDirection="row"
+                app:flexWrap="wrap"
+                app:justifyContent="flex_start" />
+
+            <com.example.gsport24.shared.LoadingButton
+                android:id="@+id/tvSave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/bcg_ripple_green_rounded_10"
+                android:transitionName="signInTransition"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTermsAndPolicy"
+                app:stateHandler='@{viewModel.uiState}'
+                app:text="@string/save"
+                app:textSize="@dimen/text_size_m" />
+        </LinearLayout>
+
+    </ScrollView>
+
+</layout>

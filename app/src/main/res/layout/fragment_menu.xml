@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:paddingBottom="@dimen/view_size_2"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:src="@drawable/ic_logo"
+                app:layout_constraintDimensionRatio="1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.23" />
+
+            <include
+                android:id="@+id/info"
+                layout="@layout/layout_menu_item"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/view_size_4"
+                app:image="@{@drawable/ic_wallet}"
+                app:layout_constraintDimensionRatio="1.5"
+                app:layout_constraintEnd_toStartOf="@id/news"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/logo"
+                app:layout_constraintWidth_percent="@dimen/menu_item_width_percent"
+                app:title="@{@string/popular_categories}" />
+
+            <include
+                android:id="@+id/news"
+                layout="@layout/layout_menu_item"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:image="@{@drawable/ic_wallet}"
+                app:layout_constraintDimensionRatio="1.5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/info"
+                app:layout_constraintTop_toTopOf="@id/info"
+                app:layout_constraintWidth_percent="@dimen/menu_item_width_percent"
+                app:title="@{@string/news}" />
+
+            <include
+                android:id="@+id/feedback"
+                layout="@layout/layout_menu_item"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/view_size_4"
+                app:image="@{@drawable/ic_wallet}"
+                app:layout_constraintDimensionRatio="1.5"
+                app:layout_constraintEnd_toStartOf="@id/about_us"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/info"
+                app:layout_constraintWidth_percent="@dimen/menu_item_width_percent"
+                app:title="@{@string/feedback}" />
+
+            <include
+                android:id="@+id/about_us"
+                layout="@layout/layout_menu_item"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:image="@{@drawable/ic_wallet}"
+                app:layout_constraintDimensionRatio="1.5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/feedback"
+                app:layout_constraintTop_toTopOf="@id/feedback"
+                app:layout_constraintWidth_percent="@dimen/menu_item_width_percent"
+                app:title="@{@string/about_us}" />
+
+            <include
+                android:id="@+id/support"
+                layout="@layout/layout_menu_item"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/view_size_4"
+                app:image="@{@drawable/ic_settings}"
+                app:layout_constraintDimensionRatio="1.5"
+                app:layout_constraintEnd_toStartOf="@id/partners"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/feedback"
+                app:layout_constraintWidth_percent="@dimen/menu_item_width_percent"
+                app:title="@{@string/support}" />
+
+            <include
+                android:id="@+id/partners"
+                layout="@layout/layout_menu_item"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:image="@{@drawable/ic_wallet}"
+                app:layout_constraintDimensionRatio="1.5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/support"
+                app:layout_constraintTop_toTopOf="@id/support"
+                app:layout_constraintWidth_percent="@dimen/menu_item_width_percent"
+                app:title="@{@string/partners}" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/view_size_3"
+                android:gravity="center"
+                android:text="Powered by ArmBoldMind"
+                android:textColor="@color/titan_white"
+                app:layout_constraintTop_toBottomOf="@id/support" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

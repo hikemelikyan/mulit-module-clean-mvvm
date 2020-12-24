@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/AdapterItemStyle"
+    android:layout_marginTop="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvTransactionType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Пополнение баланса"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_m" />
+
+    <TextView
+        android:id="@+id/tvTransactionDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTransactionType"
+        android:layout_marginTop="10dp"
+        android:text="12 Янв 2021"
+        android:textColor="@color/white_66"
+        android:textSize="@dimen/text_size_s" />
+
+    <TextView
+        android:id="@+id/tvTransactionAmount"
+        android:layout_width="wrap_content"
+        android:textStyle="bold"
+        android:layout_alignParentEnd="true"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_centerVertical="true"
+        android:text="+250₽"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_xl" />
+
+</RelativeLayout>

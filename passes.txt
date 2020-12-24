@@ -1,0 +1,3 @@
+keyStore -> Betting2020-+
+keyAlias -> GSportKeyAlias
+keyAliasPassword -> GSport242020-+

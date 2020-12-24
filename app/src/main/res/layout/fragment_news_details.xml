@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.gsport24.ui.screens.main.fragments.menu.news.NewsViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:paddingBottom="@dimen/view_size_3">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/vp_photos"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_percent="0.4"
+                app:layout_constraintTop_toTopOf="parent"
+                app:setNewsPhotos="@{viewModel.details.photos}" />
+
+            <com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
+                android:id="@+id/dots_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                app:dotsColor="@android:color/white"
+                app:dotsCornerRadius="8dp"
+                app:dotsSize="6dp"
+                app:dotsSpacing="3dp"
+                app:dotsWidthFactor="2.0"
+                app:layout_constraintBottom_toBottomOf="@id/vp_photos"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:selectedDotColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/TextTitleStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{viewModel.details.title}"
+                app:layout_constraintTop_toBottomOf="@id/vp_photos"
+                tools:text="NBA вернется в конце июля" />
+
+            <TextView
+                android:id="@+id/date"
+                style="@style/TextDateStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/title"
+                app:setNewsDate="@{viewModel.details.createdDate}"
+                tools:text="12 Янв 2021" />
+
+            <TextView
+                style="@style/TextDescriptionStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{viewModel.details.description}"
+                app:layout_constraintTop_toBottomOf="@id/date"
+                tools:text="Совет управляющих НБА готовится одобрить план по возобновлению сезона, прерванного из-за пандемии COVID-19. Об этом сообщает официальный сайт лиги. НБА планирует рестарт сезона с участием 22 команд на базе парка развлечений «Диснейуорлд» в Орландо. В турнире примут участие 13 клубов из Западной конференции и девять – из Восточной. Помимо 16 команд, которые на момент приостановки сезона находились в зоне плей-офф, в «Диснейуорлде» сыграют «Нью-Орлеан», «Портленд», «Финикс», «Сакраменто», «Сан-Антонио» и «Вашингтон». Возобновление сезона запланировано на 31 июля, финиш – на 12 октября. В случае если клуб, занимающий девятое место в таблице, будет отставать от команды на восьмой строчке меньше, чем на 4 победы, для определения последней путевки в плей-офф разыграют турнир между двумя командами: клуб с девятого места потеряет шансы на борьбу в случае одного поражения, команда с восьмого – в случае двух поражений. «Дисней» из-за ковида потерпел громадные убытки, так как большая часть прибыли шла от тематических парков." />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</layout>

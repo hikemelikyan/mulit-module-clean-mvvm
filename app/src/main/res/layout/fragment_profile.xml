@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.gsport24.ui.screens.main.fragments.profile.ProfileViewModel" />
+    </data>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        style="@style/PageContentStyle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvNameSurname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text='@{viewModel.userName}'
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_l"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvNameSurname"
+                android:layout_marginTop="5dp"
+                android:text='@{viewModel.userStatus}'
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/text_size_normal" />
+
+            <TextView
+                android:id="@+id/tvProfile"
+                style="@style/AdapterItemStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvStatus"
+                android:layout_marginTop="30dp"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/profile"
+                app:drawableStartCompat="@drawable/ic_profile_section" />
+
+            <TextView
+                android:id="@+id/tvBalance"
+                style="@style/AdapterItemStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvProfile"
+                android:layout_marginTop="10dp"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/my_balance"
+                app:drawableStartCompat="@drawable/ic_wallet" />
+
+            <TextView
+                android:id="@+id/tvBids"
+                style="@style/AdapterItemStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvBalance"
+                android:layout_marginTop="10dp"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/my_bets"
+                app:drawableStartCompat="@drawable/ic_mybettings" />
+
+            <TextView
+                android:id="@+id/tvSettings"
+                style="@style/AdapterItemStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvBids"
+                android:layout_marginTop="10dp"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/settings"
+                app:drawableStartCompat="@drawable/ic_settings" />
+
+            <TextView
+                android:id="@+id/tvTerms"
+                style="@style/AdapterItemStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvSettings"
+                android:layout_marginTop="10dp"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/terms"
+                app:drawableStartCompat="@drawable/ic_terms" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+</layout>

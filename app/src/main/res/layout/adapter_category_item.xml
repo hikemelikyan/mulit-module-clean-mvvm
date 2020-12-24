@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/PageContentStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="15dp"
+    android:paddingBottom="15dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/view_size_3"
+        app:cardBackgroundColor="@color/card_background_color"
+        app:cardCornerRadius="14dp"
+        app:cardElevation="10dp"
+        app:cardUseCompatPadding="false"
+        app:contentPadding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/view_size_10"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_l"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/nearest_event"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/tvTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <com.example.gsport24.shared.CircleShadowImageView
+        android:id="@+id/image"
+        android:layout_width="@dimen/view_size_10"
+        android:layout_height="@dimen/view_size_10"
+        android:layout_gravity="center_horizontal"
+        android:background="@android:color/transparent"
+        android:elevation="20dp"
+        android:scaleType="centerCrop"
+        app:roundStyle="circle"
+        app:shadowColor="@color/image_shadow_gray"
+        app:shadowRadius="10dp" />
+
+</FrameLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_sign_up"
+    app:startDestination="@id/emailVerificationFragment">
+
+    <!--<fragment
+        android:id="@+id/phoneVerificationFragment"
+        android:name="com.armboldmind.gsport24.ui.screens.authorization.fragments.signUp.phoneVerification.PhoneVerificationFragment"
+        android:label="PhoneVerificationFragment"
+        tools:layout="@layout/fragment_phone_verification">
+        <action
+            android:id="@+id/action_phoneVerificationFragment_to_emailVerificationFragment"
+            app:destination="@id/emailVerificationFragment"
+            app:enterAnim="@anim/fragment_anim_fade_in"
+            app:exitAnim="@anim/fragment_anim_fade_out"
+            app:popEnterAnim="@anim/fragment_anim_fade_in"
+            app:popExitAnim="@anim/fragment_anim_fade_out" />
+    </fragment>-->
+
+    <fragment
+        android:id="@+id/emailVerificationFragment"
+        android:name="com.example.gsport24.ui.screens.authorization.fragments.signUp.emailVerification.EmailVerificationFragment"
+        android:label="EmailVerificationFragment"
+        tools:layout="@layout/fragment_email_verification">
+        <action
+            android:id="@+id/action_emailVerificationFragment_to_personalInfoFragment"
+            app:destination="@id/personalInfoFragment"
+            app:enterAnim="@anim/fragment_anim_fade_in"
+            app:exitAnim="@anim/fragment_anim_fade_out"
+            app:popEnterAnim="@anim/fragment_anim_fade_in"
+            app:popExitAnim="@anim/fragment_anim_fade_out" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/personalInfoFragment"
+        android:name="com.example.gsport24.ui.screens.authorization.fragments.signUp.personalInfo.PersonalInfoFragment"
+        android:label="PersonalInfoFragment"
+        tools:layout="@layout/fragment_personal_info">
+        <argument
+            android:name="codeId"
+            app:argType="integer"
+            app:nullable="false" />
+        <action
+            android:id="@+id/action_personalInfoFragment_to_createPasswordFragment"
+            app:destination="@id/createPasswordFragment"
+            app:enterAnim="@anim/fragment_anim_fade_in"
+            app:exitAnim="@anim/fragment_anim_fade_out"
+            app:popEnterAnim="@anim/fragment_anim_fade_in"
+            app:popExitAnim="@anim/fragment_anim_fade_out" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/createPasswordFragment"
+        android:name="com.example.gsport24.ui.screens.authorization.fragments.signUp.createPassword.CreatePasswordFragment"
+        android:label="CreatePasswordFragment"
+        tools:layout="@layout/fragment_create_password">
+        <argument
+            android:name="requestModel"
+            app:argType="com.example.gsport24.data.model.requestModels.ReqModelRegister"
+            app:nullable="false" />
+    </fragment>
+
+</navigation>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_menu"
+    app:startDestination="@id/menuFragment">
+
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.example.gsport24.ui.screens.main.fragments.menu.MenuFragment"
+        android:label="MenuFragment"
+        tools:layout="@layout/fragment_menu">
+        <action
+            android:id="@+id/action_menuFragment_to_newsFragment"
+            app:destination="@id/newsFragment"
+            app:enterAnim="@anim/fragment_anim_fade_in"
+            app:exitAnim="@anim/fragment_anim_fade_out"
+            app:popEnterAnim="@anim/fragment_anim_fade_in"
+            app:popExitAnim="@anim/fragment_anim_fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/newsFragment"
+        android:name="com.example.gsport24.ui.screens.main.fragments.menu.news.NewsFragment"
+        android:label="NewsFragment"
+        tools:layout="@layout/fragment_news">
+        <action
+            android:id="@+id/action_newsFragment_to_newsDetailsFragment"
+            app:destination="@id/newsDetailsFragment"
+            app:enterAnim="@anim/fragment_anim_fade_in"
+            app:exitAnim="@anim/fragment_anim_fade_out"
+            app:popEnterAnim="@anim/fragment_anim_fade_in"
+            app:popExitAnim="@anim/fragment_anim_fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/newsDetailsFragment"
+        android:name="com.example.gsport24.ui.screens.main.fragments.menu.news.NewsDetailsFragment"
+        android:label="NewsDetailsFragment"
+        tools:layout="@layout/fragment_news_details" >
+        <argument
+            android:name="newsItem"
+            app:argType="string" />
+    </fragment>
+</navigation>

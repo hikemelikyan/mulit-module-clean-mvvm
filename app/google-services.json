@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "476396677526",
+    "project_id": "gsport24",
+    "storage_bucket": "gsport24.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:476396677526:android:fc1544a121d918c5b355b7",
+        "android_client_info": {
+          "package_name": "com.armboldmind.gsport24"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "476396677526-l4of8ulcki7b4tsai45pm3bo0kt6al3a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5Y6eJ-j50mss4wJb9jdqjWxcHxW29jIE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "476396677526-l4of8ulcki7b4tsai45pm3bo0kt6al3a.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "476396677526-1erf2k3tgkebeclg9dvu7oq51klt16fu.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.armboldmind.gsport"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

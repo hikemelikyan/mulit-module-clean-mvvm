@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/PageContentStyle"
+    android:layout_width="wrap_content"
+    android:layout_marginStart="20dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bcg_gradient_green_blue_rounded_11"
+    android:orientation="vertical"
+    android:paddingTop="20dp"
+    android:paddingBottom="20dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="?actionBarSize"
+        android:layout_height="?actionBarSize"
+        app:srcCompat="@drawable/visa_icon" />
+
+    <TextView
+        android:id="@+id/tvCardNumbers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="**** **** **** 4545"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_m"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Adam Smith"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_m"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="12/24"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_m" />
+
+</LinearLayout>

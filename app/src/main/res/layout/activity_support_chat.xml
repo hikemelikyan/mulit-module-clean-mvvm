@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.gsport24.ui.screens.supportChatAdapter.SupportChatViewModel" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar_layout"
+            android:layout_width="match_parent"
+            app:elevation="0dp"
+            android:layout_height="wrap_content"
+            android:theme="@style/ToolbarTheme">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                app:elevation="0dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/dark_blue">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="?android:attr/actionBarSize"
+                    android:gravity="center"
+                    android:text="@string/technical_support"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/text_size_m"
+                    android:textStyle="bold" />
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/chat_recycler"
+            style="@style/PageContentStyle"
+            app:stackFromEnd="true"
+            android:layout_width="match_parent"
+            app:message_items='@{viewModel.messages}'
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_height="match_parent"
+            android:layout_above="@id/flInput"
+            android:layout_below="@id/app_bar_layout" />
+
+        <FrameLayout
+            android:id="@+id/flInput"
+            style="@style/PageContentStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/dark_blue"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bcg_support_edit_text_bordered">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivAttachFile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/view_size_2"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:padding="5dp"
+                    app:srcCompat="@drawable/ic_attach" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivAttachPhoto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/view_size_1"
+                    android:layout_toEndOf="@id/ivAttachFile"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:padding="5dp"
+                    app:srcCompat="@drawable/ic_gallery" />
+
+                <EditText
+                    style="@style/SupportEditStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@id/ivSendMessage"
+                    android:layout_toEndOf="@id/ivAttachPhoto"
+                    android:hint="@string/type_message"
+                    android:importantForAutofill="no"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:maxLines="5" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivSendMessage"
+                    android:layout_width="wrap_content"
+                    android:padding="5dp"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/view_size_3"
+                    app:srcCompat="@drawable/ic_send" />
+
+            </RelativeLayout>
+
+        </FrameLayout>
+
+    </RelativeLayout>
+</layout>

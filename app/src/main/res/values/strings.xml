@@ -1,0 +1,77 @@
+<resources>
+    <string name="app_name">GSport24</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="oops">Oops</string>
+    <string name="phone_number">Номер телефона</string>
+    <string name="send_code">Послать код</string>
+    <string name="sign_up">Зарегистрироваться</string>
+    <string name="sign_in">Войти в систему</string>
+    <string name="basketball">Баскетбол</string>
+    <string name="nearest_event">ближайшее событие</string>
+    <string name="type_message">Type message</string>
+    <string name="technical_support">Техническая поддержка</string>
+
+    <string name="lorem" translatable="false">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </string>
+    <string name="hone_number_or_email">Номер телефона или эл. почта</string>
+    <string name="sign_in_to_system">Вход в систему</string>
+    <string name="forgot_password">Забыли пароль?</string>
+    <string name="code">Код</string>
+    <string name="next">Далее</string>
+    <string name="email">Электронная почта</string>
+    <string name="name">Имя</string>
+    <string name="surname">Фамилия</string>
+    <string name="second_name">Отчество</string>
+    <string name="date_of_birth">Дата рождения</string>
+    <string name="gender">Пол</string>
+    <string name="password">Пароль</string>
+    <string name="submit_password">Подтвердите пароль</string>
+    <string name="i_agree_with_therms_and_policy">Я прочел(а) и согласен(а) Условия и Положения и Условия Конфидециальности</string>
+    <string name="select_birth_date">Select birth date</string>
+    <string name="choose_your_gender">Choose your gender</string>
+    <string name="please_check_out_our_terms_and_conditions">Please check our terms and privacy policy</string>
+    <string name="back">Назад</string>
+    <string name="to_details">To details</string>
+    <string name="popular_categories">Популярные категории</string>
+    <string name="latest_news">Последние новости</string>
+    <string name="all">Все</string>
+    <string name="category_empty_title">Список категорий пуст</string>
+    <string name="category_empty_subtitle">Лист будет через 10–15 лет</string>
+    <string name="status_confirmed">Статус подтвержден</string>
+    <string name="status_unconfirmed">Статус не подтвержден</string>
+    <string name="fake_name">Адам Смит</string>
+    <string name="profile">Профиль</string>
+    <string name="my_balance">Мой баланс</string>
+    <string name="my_bets">Мои ставки</string>
+    <string name="settings">Настройки</string>
+    <string name="terms">Условия</string>
+    <string name="passport_info">Паспортные данные</string>
+    <string name="change_password">Изменить пароль</string>
+    <string name="save">Сохранить</string>
+    <string name="all_categories">Все категории</string>
+    <string name="passport_number">Номер пасспорта</string>
+    <string name="given_date">Дата выдачи</string>
+    <string name="who_gave">Кем выдан</string>
+    <string name="passport_photo">Фото паспорта</string>
+    <string name="upload_photo_hint">Загрузите фотографи паспорта с обеих сторон</string>
+    <string name="camera">Камера</string>
+    <string name="gallery">Галерея</string>
+    <string name="upload_from">Загрузить через</string>
+    <string name="old_password">Старый пароль</string>
+    <string name="new_password">Новый пароль</string>
+    <string name="confirm_new_password">Подтвердите новый пароль</string>
+
+    <string name="info_center">Справочный центр</string>
+    <string name="news">Новости и акции</string>
+    <string name="feedback">Отзывы клиентов</string>
+    <string name="about_us">О нас и сервисе</string>
+    <string name="support">Тех. поддержка</string>
+    <string name="partners">Партнерские программы</string>
+
+    <string name="cash_out">Снять с баланса</string>
+    <string name="your_balance">Ваш Баланс</string>
+    <string name="fill_in">+ Пополнить</string>
+    <string name="your_cards">Ваши карты</string>
+    <string name="add">Добавить</string>
+
+</resources>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.gsport24.ui.screens.main.fragments.home.HomeViewModel" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvHome"
+            style="@style/PageContentStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:paddingBottom="10dp"
+            app:horizontal_banner_items='@{viewModel.banners}'
+            app:horizontal_category_items='@{viewModel.categories}'
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:news_items_main="@{viewModel.news}" />
+
+    </RelativeLayout>
+
+</layout>

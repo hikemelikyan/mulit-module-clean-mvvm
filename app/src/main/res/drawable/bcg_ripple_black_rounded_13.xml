@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple android:color="@color/silver_chalice" xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/mask">
+        <shape>
+            <solid android:color="@color/silver_chalice"/>
+            <corners android:radius="13dp"/>
+        </shape>
+    </item>
+    <item android:drawable="@drawable/bcg_balance_rounded_13"/>
+</ripple>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.gsport24.ui.screens.authorization.fragments.signIn.SignInViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        style="@style/PageContentStyle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/app_icon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:transitionName="app_icon_transition"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_logo" />
+
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?actionBarSize"
+            android:text="@string/sign_in_to_system"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_l"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/app_icon" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPhone"
+            style="@style/EditStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="@string/hone_number_or_email"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:text="@={viewModel.userName}"
+            android:inputType="text"
+            app:layout_constraintTop_toBottomOf="@id/title" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPassword"
+            style="@style/EditStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@={viewModel.password}"
+            android:hint="@string/password"
+            android:imeOptions="actionDone"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            app:layout_constraintTop_toBottomOf="@id/etPhone" />
+
+        <TextView
+            android:id="@+id/tvForgotPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/bcg_ripple_transparent_rounded_6"
+            android:padding="5dp"
+            android:text="@string/forgot_password"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_m"
+            app:layout_constraintEnd_toEndOf="@id/etPassword"
+            app:layout_constraintTop_toBottomOf="@id/etPassword" />
+
+        <com.example.gsport24.shared.LoadingButton
+            android:id="@+id/tvSignIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/bcg_ripple_green_rounded_10"
+            android:transitionName="signInTransition"
+            app:layout_constraintTop_toBottomOf="@id/tvForgotPassword"
+            app:stateHandler='@{viewModel.uiState}'
+            app:text="@string/sign_in"
+            app:textSize="@dimen/text_size_m" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/AdapterItemStyle"
+    android:layout_marginTop="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivNotificationType"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:background="@drawable/bcg_green_circle"
+        android:padding="10dp"
+        app:srcCompat="@drawable/ic_category"
+        app:tint="@android:color/white" />
+
+    <TextView
+        android:id="@+id/tvNotificationDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_toEndOf="@id/ivNotificationType"
+        android:text="Новая категория у нас! Теперь можете ставить ставки на игры в категории Баскетбол"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_m" />
+
+    <TextView
+        android:id="@+id/tvNotificationDate"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12 Янв 2021"
+        android:layout_marginStart="20dp"
+        android:layout_below="@id/tvNotificationDescription"
+        android:layout_toEndOf="@id/ivNotificationType"
+        android:textColor="@color/white_66"
+        android:textSize="@dimen/text_size_s" />
+
+</RelativeLayout>
